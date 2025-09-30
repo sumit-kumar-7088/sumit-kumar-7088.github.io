@@ -1,0 +1,22 @@
+/* style.css */
+
+/* Import Google Font (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth scrolling for nav links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Extra custom styling (optional) */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2563eb; /* Tailwind blue-600 */
+}

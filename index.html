@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,148 +7,204 @@
     <title>Sumit Kumar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-slate-900 text-slate-300 selection:bg-cyan-500 selection:text-white">
 
-    <!-- Navbar -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <!-- Navbar (Frosted Glass Dark Mode) -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <h1 class="text-xl font-bold text-blue-600">Sumit Kumar</h1>
-            <nav class="space-x-6">
-                <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#skills" class="hover:text-blue-600">Skills</a>
-                <a href="#projects" class="hover:text-blue-600">Projects</a>
-                <a href="#certifications" class="hover:text-blue-600">Certifications</a>
-                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            <h1 class="text-xl font-bold text-cyan-400 tracking-wide">Sumit</h1>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#certifications" class="hover:text-cyan-400 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
             </nav>
+            <!-- Mobile Menu Button (Optional placeholder) -->
+            <button class="md:hidden text-cyan-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20">
-        <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Sumit Kumar</h2>
-                <p class="text-lg mb-6">Software Engineer | Full-Stack Developer | Problem Solver</p>
-                <div class="flex space-x-4">
+    <!-- Hero Section (Dark with Glowing Accents) -->
+    <section class="relative py-24 overflow-hidden">
+        <!-- Background Glowing Orbs -->
+        <div class="absolute top-0 left-1/4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-72 h-72 bg-violet-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center px-6 relative z-10">
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <p class="text-cyan-400 font-mono mb-2">Hi, my name is</p>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">Sumit Kumar.</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-500 mb-6">I build things for the web.</h3>
+                <p class="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
+                    I'm a Full-Stack Developer specializing in Java, React, and Node.js. I love turning complex problems into elegant, scalable, and user-friendly digital experiences.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
                     <a href="#projects"
-                        class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-200">
+                        class="px-6 py-3 rounded text-cyan-400 border border-cyan-400 hover:bg-cyan-400/10 transition-all font-mono text-sm">
                         View My Work
                     </a>
                     <a href="assets/Sumit-Kumar-Resume.pdf" download
-                        class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-500">
+                        class="px-6 py-3 rounded bg-cyan-500 text-slate-900 font-semibold hover:bg-cyan-400 transition-all shadow-[0_0_15px_rgba(6,182,212,0.4)] text-sm">
                         Download Resume
                     </a>
                 </div>
-
             </div>
+            
             <div class="md:w-1/2 flex justify-center">
-                <img src="assets/profile.jpg" alt="Sumit Kumar"
-                    class="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-white">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-violet-500 rounded-full blur opacity-50"></div>
+                    <img src="assets/profile.jpg" alt="Sumit Kumar"
+                        class="relative rounded-full w-64 h-64 object-cover border-2 border-slate-800 shadow-2xl z-10 grayscale hover:grayscale-0 transition duration-500">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
-        <p class="text-center max-w-2xl mx-auto">
-            Motivated Software Engineer pursuing a B.Tech in Computer Science with strong skills in full-stack
-            development
-            (Java, React, Node.js). Eager to apply technical expertise, leadership experience, and creativity to
-            real-world
-            software challenges while contributing to innovative, scalable solutions that drive user and business value.
+    <section id="about" class="py-20 container mx-auto px-6 border-t border-slate-800/50">
+        <h2 class="text-3xl font-bold mb-6 text-center text-white"><span class="text-cyan-400 font-mono text-xl mr-2">01.</span>About Me</h2>
+        <p class="text-center max-w-2xl mx-auto mb-4 text-slate-400">
+            I'm a B.Tech Computer Science student ('26) who loves building things that live on the internet. I focus on
+            developing full-stack web applications with Java, React, and Node.js.
         </p>
-        <div class="mt-6 text-center">
-            <p><strong>Education:</strong> B.Tech, Galgotias University (2022–2026)</p>
+        <p class="text-center max-w-2xl mx-auto text-slate-400">
+            Whether I'm designing backend architecture or creating responsive user interfaces, I enjoy the process of
+            turning complex problems into scalable, user-friendly solutions. I'm currently sharpening my skills in
+            Spring Boot and looking forward to tackling new software challenges.
+        </p>
+        <div class="mt-8 text-center bg-slate-800/50 border border-slate-700 p-4 rounded-lg inline-block mx-auto shadow-lg">
+            <p class="font-semibold text-cyan-400 font-mono text-sm">🎓 B.Tech in Computer Science, Galgotias University (2022–2026)</p>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="bg-gray-100 py-20">
+    <section id="skills" class="bg-slate-800/20 py-20 border-t border-slate-800/50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center">
-                <div class="p-4 bg-white rounded-lg shadow">Java</div>
-                <div class="p-4 bg-white rounded-lg shadow">HTML</div>
-                <div class="p-4 bg-white rounded-lg shadow">CSS</div>
-                <div class="p-4 bg-white rounded-lg shadow">JavaScript</div>
-                <div class="p-4 bg-white rounded-lg shadow">React</div>
-                <div class="p-4 bg-white rounded-lg shadow">Node.js</div>
+            <h2 class="text-3xl font-bold mb-12 text-center text-white"><span class="text-cyan-400 font-mono text-xl mr-2">02.</span>Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 text-center font-mono">
+                <!-- Skill Cards -->
+                <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg shadow-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-300">Java</div>
+                <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg shadow-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-300">Spring Boot</div>
+                <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg shadow-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-300">HTML & CSS</div>
+                <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg shadow-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-300">JavaScript</div>
+                <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg shadow-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-300">React</div>
+                <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg shadow-lg hover:border-cyan-400 hover:text-cyan-400 transition-all text-slate-300">Node.js</div>
             </div>
         </div>
     </section>
 
     <!-- Projects -->
-<section id="projects" class="py-20 container mx-auto px-6">
-  <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
-  <div class="grid md:grid-cols-3 gap-8">
+    <section id="projects" class="py-20 container mx-auto px-6 border-t border-slate-800/50">
+        <h2 class="text-3xl font-bold mb-12 text-center text-white"><span class="text-cyan-400 font-mono text-xl mr-2">03.</span>Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
 
-    <!-- Project 1 -->
-    <div onclick="window.open('https://yourlink.com/chat-app', '_blank')" 
-         class="bg-white rounded-lg shadow p-6 cursor-pointer hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">Live Chat Application</h3>
-      <p class="text-sm mb-4">Real-time chat app using React, Node.js, and Socket.io with features like instant messaging, multiple chat rooms, and user authentication.</p>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">React</span>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Node.js</span>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Socket.io</span>
-    </div>
+            <!-- Project 1: Bus Booking -->
+            <div class="bg-slate-800 border border-slate-700 rounded-lg shadow-lg p-6 hover:-translate-y-2 hover:shadow-[0_10px_30px_-15px_rgba(6,182,212,0.3)] transition-all flex flex-col group">
+                <div class="flex justify-between items-center mb-4">
+                    <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors">Online Bus Booking System</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">
+                    A backend-focused system for managing bus reservations. Enables users to search routes, check
+                    real-time seat availability, and process bookings securely.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6 font-mono text-xs">
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">Java</span>
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">Spring Boot</span>
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">MySQL</span>
+                </div>
+                <div class="flex space-x-3 mt-auto">
+                    <a href="https://github.com/sumit-kumar-7088/YOUR_REPO_NAME" target="_blank"
+                        class="flex-1 text-center bg-slate-700 text-white py-2 rounded hover:bg-slate-600 transition font-medium text-sm">
+                        View Code
+                    </a>
+                </div>
+            </div>
 
-    <!-- Project 2 (Updated from Porter Clone to CityLoad Express) -->
-    <div onclick="window.open('https://sumit-kumar-7088.github.io/CityLoad-Express/', '_blank')" 
-         class="bg-white rounded-lg shadow p-6 cursor-pointer hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">CityLoad Express – Logistics Simulation</h3>
-      <p class="text-sm mb-4">Responsive logistics booking web app with real-time fare calculation, vehicle selection, and booking history tracking for user convenience.</p>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">HTML</span>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">CSS</span>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">JavaScript</span>
-    </div>
+            <!-- Project 2: CityLoad -->
+            <div class="bg-slate-800 border border-slate-700 rounded-lg shadow-lg p-6 hover:-translate-y-2 hover:shadow-[0_10px_30px_-15px_rgba(6,182,212,0.3)] transition-all flex flex-col group">
+                <div class="flex justify-between items-center mb-4">
+                    <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors">CityLoad Express</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">
+                    A logistics simulation web app that streamlines the booking process. Features dynamic fare
+                    calculation based on distance and vehicle type, alongside a booking history tracker.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6 font-mono text-xs">
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">HTML</span>
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">CSS</span>
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">JavaScript</span>
+                </div>
+                <div class="flex space-x-3 mt-auto">
+                    <a href="https://github.com/sumit-kumar-7088/CityLoad-Express" target="_blank"
+                        class="flex-1 text-center bg-slate-700 text-white py-2 rounded hover:bg-slate-600 transition font-medium text-sm">
+                        View Code
+                    </a>
+                    <a href="https://sumit-kumar-7088.github.io/CityLoad-Express/" target="_blank"
+                        class="flex-1 text-center border border-cyan-400 text-cyan-400 py-2 rounded hover:bg-cyan-400/10 transition font-medium text-sm">
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 3: Live Chat (Placeholder from earlier) -->
+            <div class="bg-slate-800 border border-slate-700 rounded-lg shadow-lg p-6 hover:-translate-y-2 hover:shadow-[0_10px_30px_-15px_rgba(6,182,212,0.3)] transition-all flex flex-col group">
+                <div class="flex justify-between items-center mb-4">
+                    <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors">Live Chat Application</h3>
+                <p class="text-slate-400 text-sm mb-6 flex-grow">
+                    A real-time communication platform allowing instant messaging across multiple rooms utilizing WebSockets.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6 font-mono text-xs">
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">React</span>
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">Node.js</span>
+                    <span class="text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">Socket.io</span>
+                </div>
+                <div class="flex space-x-3 mt-auto">
+                    <a href="https://github.com/sumit-kumar-7088/YOUR_REPO_NAME" target="_blank"
+                        class="flex-1 text-center bg-slate-700 text-white py-2 rounded hover:bg-slate-600 transition font-medium text-sm">
+                        View Code
+                    </a>
+                </div>
+            </div>
 
-    <!-- Project 3 -->
-    <div onclick="window.open('https://yourlink.com/bus-booking', '_blank')" 
-         class="bg-white rounded-lg shadow p-6 cursor-pointer hover:shadow-xl transition">
-      <h3 class="text-xl font-semibold mb-2">Online Bus Booking System</h3>
-      <p class="text-sm mb-4">Web app using Java, Spring Boot, and MySQL that enables users to search buses, check seat availability, and book tickets.</p>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Java</span>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Spring Boot</span>
-      <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">MySQL</span>
-    </div>
-
-  </div>
-</section>
-
+        </div>
+    </section>
 
     <!-- Certifications -->
-    <section id="certifications" class="bg-gray-100 py-20">
+    <section id="certifications" class="bg-slate-800/20 py-20 border-t border-slate-800/50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8 text-center">Certifications</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center text-white"><span class="text-cyan-400 font-mono text-xl mr-2">04.</span>Certifications</h2>
             <div class="grid md:grid-cols-3 gap-6">
 
-                <!-- Certificate 1 -->
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <h3 class="font-semibold mb-2">Java Full Stack Developer - Edu Skills</h3>
-                    <a href="assets/java-fullstack.pdf"
-                        target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-lg shadow-lg text-center hover:border-cyan-400/50 transition-colors">
+                    <h3 class="font-semibold mb-4 text-slate-200">Java Full Stack Developer<br><span class="text-sm text-slate-400 font-normal">Edu Skills</span></h3>
+                    <a href="assets/java-fullstack.pdf" target="_blank"
+                        class="inline-block border border-cyan-400 text-cyan-400 font-mono text-sm px-4 py-2 rounded hover:bg-cyan-400/10 transition">
                         View Certificate
                     </a>
                 </div>
 
-                <!-- Certificate 2 -->
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <h3 class="font-semibold mb-2">Core Java - Internshala</h3>
-                    <a href="assets/core-java.pdf"
-                        target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-lg shadow-lg text-center hover:border-cyan-400/50 transition-colors">
+                    <h3 class="font-semibold mb-4 text-slate-200">Core Java<br><span class="text-sm text-slate-400 font-normal">Internshala</span></h3>
+                    <a href="assets/core-java.pdf" target="_blank"
+                        class="inline-block border border-cyan-400 text-cyan-400 font-mono text-sm px-4 py-2 rounded hover:bg-cyan-400/10 transition">
                         View Certificate
                     </a>
                 </div>
 
-                <!-- Certificate 3 (Coming Soon) -->
-                <div class="bg-white p-6 rounded-lg shadow text-center">
-                    <h3 class="font-semibold mb-2">Java Course - Wipro</h3>
-                    <a href="assets/J_250540486_Sumit Kumar.pdf"
-                        target="_blank" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                <div class="bg-slate-800 border border-slate-700 p-6 rounded-lg shadow-lg text-center hover:border-cyan-400/50 transition-colors">
+                    <h3 class="font-semibold mb-4 text-slate-200">Java Course<br><span class="text-sm text-slate-400 font-normal">Wipro</span></h3>
+                    <a href="assets/J_250540486_Sumit Kumar.pdf" target="_blank"
+                        class="inline-block border border-cyan-400 text-cyan-400 font-mono text-sm px-4 py-2 rounded hover:bg-cyan-400/10 transition">
                         View Certificate
                     </a>
                 </div>
@@ -157,69 +213,46 @@
         </div>
     </section>
 
-
-
     <!-- Contact -->
-<section id="contact" class="py-20 container mx-auto px-6">
-  
-  <div class="text-center space-y-6">
-    
-    <!-- Social Profiles -->
-    <div>
-      <h2 class="text-3xl font-bold mb-8 text-center">Social Profiles</h2>
-      <div class="flex justify-center space-x-6">
-        
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/sumit-kumar-1b2107257/" target="_blank"
-           class="flex items-center space-x-2 bg-white shadow px-4 py-2 rounded-lg hover:bg-blue-50">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
-               alt="LinkedIn" class="w-6 h-6">
-          <span>LinkedIn</span>
-        </a>
-        
-        <!-- LeetCode -->
-        <a href="https://leetcode.com/u/Sumit__kumar_/" target="_blank"
-           class="flex items-center space-x-2 bg-white shadow px-4 py-2 rounded-lg hover:bg-yellow-50">
-          <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" 
-               alt="LeetCode" class="w-6 h-6">
-          <span>LeetCode</span>
-        </a>
+    <section id="contact" class="py-20 container mx-auto px-6 border-t border-slate-800/50">
+        <div class="max-w-2xl mx-auto text-center space-y-12">
+            
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-white"><span class="text-cyan-400 font-mono text-xl mr-2">05.</span>What's Next?</h2>
+                <h3 class="text-4xl font-extrabold text-slate-300 mb-6">Get In Touch</h3>
+                <p class="text-slate-400 mb-8">
+                    I'm currently looking for new opportunities as a Full-Stack Developer. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                </p>
+                <a href="mailto:sumitvk7088@gmail.com" class="inline-block border border-cyan-400 text-cyan-400 px-8 py-4 rounded hover:bg-cyan-400/10 transition font-mono">
+                    Say Hello
+                </a>
+            </div>
 
-        <a href="https://github.com/sumit-kumar-7088" target="_blank"
-           class="flex items-center space-x-2 bg-white shadow px-4 py-2 rounded-lg hover:bg-yellow-50">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
-               alt="GitHub" class="w-6 h-6">
-          <span>GitHub</span>
-        </a>
-        
-        <!-- HackerRank -->
-        <a href="https://www.hackerrank.com/profile/sumitvk955" target="_blank"
-           class="flex items-center space-x-2 bg-white shadow px-4 py-2 rounded-lg hover:bg-yellow-50">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" 
-               alt="HackerRank" class="w-6 h-6">
-          <span>HackerRank</span>
-        </a>
-    
-        
-      </div>
-    </div>
+            <!-- Social Profiles -->
+            <div class="pt-12 border-t border-slate-800">
+                <div class="flex justify-center space-x-4 md:space-x-6">
+                    <a href="https://www.linkedin.com/in/sumit-kumar-1b2107257/" target="_blank" class="flex items-center justify-center w-12 h-12 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-400 hover:-translate-y-1 transition-all">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-6 h-6 brightness-90">
+                    </a>
+                    <a href="https://github.com/sumit-kumar-7088" target="_blank" class="flex items-center justify-center w-12 h-12 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-400 hover:-translate-y-1 transition-all">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-6 h-6 invert">
+                    </a>
+                    <a href="https://leetcode.com/u/Sumit__kumar_/" target="_blank" class="flex items-center justify-center w-12 h-12 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-400 hover:-translate-y-1 transition-all">
+                        <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="w-6 h-6">
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/sumitvk955" target="_blank" class="flex items-center justify-center w-12 h-12 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-400 hover:-translate-y-1 transition-all">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank" class="w-6 h-6">
+                    </a>
+                </div>
+            </div>
 
-    <!-- Email -->
-    <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-    <p>Email: <a href="mailto:sumitvk7088@gmail.com" class="text-blue-600 font-medium">sumitvk7088@gmail.com</a></p>
-  
-    
-    
-  </div>
-</section>
-
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6 text-center">
-        <p>© 2025 Sumit Kumar. All Rights Reserved.</p>
+    <footer class="bg-slate-950 text-slate-500 py-6 text-center font-mono text-sm border-t border-slate-900">
+        <p>© 2026 Sumit Kumar. Built with Tailwind CSS.</p>
     </footer>
 
 </body>
-
 </html>
-
